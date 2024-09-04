@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title> Even Odd App by kamal sir</title>
+		<style>
+			*{font-size:60px;}
+			body{background-color:linen;}
+		</style>
+	</head>
+	<body>
+	<center>
+		<h1> Even Odd App</h1>
+		<form onsubmit="check()">
+		<input type="number" id="num" placeholdper="please enter number"	/>
+		<input type="submit" value="M1" />
+		<input type="submit" value="M2" />
+		<input type="submit" value="M3">
+		</form>
+		<h2 id="msg"/>
+		
+		<script>
+			function check()
+			{		
+				event.preventDefault();
+				let num=document.getElementById("num");
+				let action=document.activeElement.value;
+				let msg=document.getElementById("msg");
+			
+			if(num.value==="")
+			{
+			alert("please enter number");
+			msg.innerHTML="";
+			num1.focus;
+			return;
+			}
+			if(action==="M1")
+			{
+			let n = parseInt(num.value);
+			let r = n%2===0?"even":"odd";
+			msg.innerHTML="ans1="+r;
+			}
+
+			else if(action==="M2")
+			{
+			let n = parseInt(num.value);
+			let r = n%2===0?"even":"odd";
+			if(n%2===0)
+				r="even";
+			else 
+				r= "odd";
+			msg.innerHTML="ans2="+r;
+			}
+
+			else if(action==="M3")
+			{
+			let n = parseInt(num.value);
+			let r = "";
+			switch(n%2)
+			{
+			case 0: 	r="even";	break;
+			case 1: 	r="odd";	break;
+			case -1: 	r="odd";	break;
+			}
+			msg.innerHTML="ans3="+r;
+			}
+			
+			}
+		</script>
+	</center>
+	</body>
+
+</html>
